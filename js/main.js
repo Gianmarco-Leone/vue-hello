@@ -10,7 +10,14 @@
 console.log(Vue);
 
 // Faccio funzionare Vue dichiarando una variabile locale collegata alla variabile globale Vue
-const app = Vue.createApp({});
+const app = Vue.createApp({
+    data() {
+        return {
+            // Stampare a schermo un messaggio all'interno di un h1, utilizzando i data.
+            messageTitle: "I primi passi con Vue.js"
+        }
+    }
+});
 
 // Monto Vue dentro il div contenitore dell'html
 app.mount("#root");
